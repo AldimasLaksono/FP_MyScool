@@ -18,22 +18,22 @@ class UserFactory extends Factory
     public function definition(): array
     {
         //Akun Dumy Guru
-        // return [
-        //     'name' => $this->faker-> name(), //generate nama
-        //     'email' => $this->faker->unique()->safeEmail,
-        //     'password' => 'guru', //password di encrip
-        //     'status' => 'active',
-        //     'role' => 'guru',
-        // ];
-        
-        //Akun Dumy Siswa
         return [
             'name' => $this->faker-> name(), //generate nama
             'email' => $this->faker->unique()->safeEmail,
-            'password' => 'siswa', //password di encrip
+            'password' => 'guru', //password di encrip
             'status' => 'active',
-            'role' => 'siswa',
+            'role' => 'guru',
         ];
+        
+        //Akun Dumy Siswa
+        // return [
+        //     'name' => $this->faker-> name(), //generate nama
+        //     'email' => $this->faker->unique()->safeEmail,
+        //     'password' => 'siswa', //password di encrip
+        //     'status' => 'active',
+        //     'role' => 'siswa',
+        // ];
     }
 
     /**

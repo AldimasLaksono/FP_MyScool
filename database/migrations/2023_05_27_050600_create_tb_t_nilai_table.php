@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('tb_t_nilai', function (Blueprint $table) {
+            $table->id('id_tn');
+            $table->unsignedBigInteger('id_tup');
+            $table->foreign('id_tup')->references('id_tup')->on('tb_t_uptugas');
+            $table->integer('nilai_tn');
+            $table->string('description_tn');
             $table->timestamps();
         });
     }
@@ -27,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tb_t_nilai');
     }
 };
