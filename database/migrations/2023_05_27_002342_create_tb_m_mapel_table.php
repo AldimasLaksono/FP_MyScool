@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('tb_m_mapel', function (Blueprint $table) {
             $table->id('id_mm');
             $table->string('name_mm');
-            $table->tinyInteger('status_mm');
             $table->timestamps();
         });
     }

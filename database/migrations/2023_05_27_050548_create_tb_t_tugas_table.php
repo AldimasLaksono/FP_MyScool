@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('gmb_tj')->nullable();
             $table->string('file_tj')->nullable();
             $table->dateTime('deadline_tt');
-            $table->tinyInteger('status_tt');
             $table->timestamps();
 
         });

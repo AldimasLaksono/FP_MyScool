@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class Userteacher extends Model
 {
     use HasApiTokens, HasFactory, Notifiable;
 
     //definiskan tabel secara manual
-    protected $table = 'tb_m_user';
+    protected $table = 'tb_m_user_teacher';
 
     /**
      * The attributes that are mass assignable.
@@ -21,11 +21,19 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
+        'id_mja',
+        'nip',
+        'name_mut',
+        'ttl_mut',
+        'gender_mut',
+        'alamat_mut',
+        'notelp_mut',
+        'email_mut',
+        'status_mut',
+        'foto_mut',
+        'role_mut',
         'password',
         'status',
-        'role',
     ];
 
     /**

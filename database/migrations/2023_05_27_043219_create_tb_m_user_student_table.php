@@ -20,8 +20,8 @@ return new class extends Migration
             $table->text('alamat_mus');
             $table->bigInteger('notelp_mus');
             $table->string('email_mus');
-            $table->string('foto_mus');
-            $table->text('password_mus');
+            $table->string('foto_mus')->nullable();
+            $table->text('password');
             $table->enum('status_mus',['active','deactive']);
             $table->timestamps();
         });

@@ -2,7 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthController; //panggil AuthController
+use App\Http\Controllers\AuthTeacher;
+use App\Http\Controllers\AuthStudent;
 use App\Http\Controllers\Admin\JabatanController; //panggil JabatanController
 use App\Http\Controllers\Admin\MapelController; //panggil MapelController
 use App\Http\Controllers\Admin\GedungController; //panggil GedungController
@@ -20,8 +21,10 @@ use App\Http\Controllers\Admin\GuruController; //panggil RuangController
 |
 */
 
-Route::post('register',[AuthController::class,'register']);
-Route::post('login', [AuthController::class, 'login']);
+//Login untuk teacher / admin
+Route::post('login', [AuthTeacher::class, 'login_teacher']);
+//Login untuk student
+Route::post('login_student', [AuthStudent::class, 'login_student']);
 
 Route::middleware(['admin.api'])->prefix('admin')->group(function(){
     //Route CRUD Data Jabatan

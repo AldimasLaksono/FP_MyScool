@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('tb_m_jabatan', function (Blueprint $table) {
             $table->id('id_mja');
             $table->string('name_mja',50);
-            $table->tinyInteger('status_mja');
             $table->timestamps();
         });
     }

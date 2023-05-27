@@ -23,9 +23,9 @@ return new class extends Migration
             $table->bigInteger('notelp_mut');
             $table->string('email_mut');
             $table->enum('status_mut',['tetap','honorer']);
-            $table->string('foto_mut');
+            $table->string('foto_mut')->nullable();
             $table->enum('role_mut',['admin','guru']);
-            $table->text('password_mut');
+            $table->text('password');
             $table->enum('status',['active','deactive']);
             $table->timestamps();
         });

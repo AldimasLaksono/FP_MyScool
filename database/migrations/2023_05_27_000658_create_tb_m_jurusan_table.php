@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('tb_m_jurusan', function (Blueprint $table) {
             $table->id('id_mj');
             $table->string('name_mj');
-            $table->tinyInteger('status_mj');
             $table->timestamps();
         });
     }

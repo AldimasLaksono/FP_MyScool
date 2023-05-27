@@ -20,7 +20,6 @@ return new class extends Migration
             $table->unsignedBigInteger('id_mj');
             $table->foreign('id_mj')->references('id_mj')->on('tb_m_jurusan');
             $table->string('name_tc');
-            $table->tinyInteger('status_tc');
             $table->timestamps();
         });
     }
